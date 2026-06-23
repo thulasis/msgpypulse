@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e  # Exit on any error
+
+# Initialize mamba (add the source command you mentioned)
+source /home/trelangi/miniforge3/etc/profile.d/mamba.sh
+
+# Activate environment
+mamba activate msgfplus
+
+/home/trelangi/Desktop/msgfp_down/scripts/msgpypulse_cli.py "$@"
