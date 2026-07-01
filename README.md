@@ -205,9 +205,3 @@ If you use msgpypulse in your research, please cite:
   url={https://github.com/thulasis/msgpypulse}
 }
 ```
-
-## Acknowledgements
-
-- **MS-GF+**: For the initial peptide identification
-- **PHRP**: For shared peptide identification
-- **CD-HIT**: For sequence clustering
