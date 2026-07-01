@@ -106,9 +106,9 @@ The pipeline executes the following steps in order:
 
 ```bash
 msgpypulse_cli.py \
-  -i ./data/sics \
-  -o ./results/final_proteins.tsv \
-  --database ./data/database.fasta
+  -i /path/to/SICs \
+  -o ./final_protein_matrix.tsv \
+  --database /path/to/database.fasta
 ```
 
 ### Example 2: Advanced Analysis with Clustering
@@ -141,18 +141,6 @@ pipeline = MSGFPDOWNPipeline()
 pipeline.fdr_estimator(input_dir="./data/SICs", output_dir="./results/fdr_estd")
 ```
 
-## File Structure
-
-```
-msgpypulse/
-├── msgpypulse_cli.py          # Main CLI script
-├── README.md                  # This documentation
-├── requirements.txt           # Python dependencies
-└── examples/                  # Example configurations and data
-    ├── config_basic.yaml
-    ├── config_advanced.yaml
-    └── sample_sics/
-```
 
 ## Dependencies
 
@@ -165,12 +153,6 @@ msgpypulse/
 - **Optional**:
   - `cd-hit` - Sequence clustering (installed via system package manager)
 
-### Installation of Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Development
 
 ### Contributing
@@ -180,24 +162,6 @@ pip install -r requirements.txt
 3. Make your changes
 4. Test your changes
 5. Submit a pull request
-
-### Testing
-
-```bash
-# Run unit tests
-pytest
-
-# Run integration tests
-pytest tests/integration/
-```
-
-### Code Style
-
-This project follows PEP 8 style guidelines. Use black for code formatting:
-
-```bash
-black msgpypulse/
-```
 
 ## Troubleshooting
 
@@ -233,7 +197,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you use msgpypulse in your research, please cite:
 
 ```
-@misc{thulasis2024msgpypulse,
+@misc{thulasis2025msgpypulse,
   title={msgpypulse: A comprehensive MS-GF+ downstream analysis pipeline},
   authors={Tulasi Rao Relangi, PhD},{Harrison Hall, Graduate Student}
   group=Wright Lab, Baylor University
